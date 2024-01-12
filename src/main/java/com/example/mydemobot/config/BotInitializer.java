@@ -23,7 +23,7 @@ public class BotInitializer {
         try {
             telegramBotsApi.registerBot(telegramBotService);
         } catch (TelegramApiException e) {
-            throw new RuntimeException(e);
+            log.error("Error occured: ${}",e.getMessage());
         }
     }
 }
